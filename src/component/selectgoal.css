@@ -1,0 +1,32 @@
+.banner-form {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+  }
+  
+  .banner-form h1 {
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 10rem; /* Adjust as needed */
+  }
+  
+  /* Styles for tablets and laptops */
+  @media (min-width: 768px) {
+    .banner-form h1 {
+      font-size: 5vw; /* Responsive font size for tablets/laptops */
+    }
+  }
+  
+  /* Styles for mobile devices */
+  @media (max-width: 767px) {
+    .banner-form h1 {
+      font-size: 7vw; /* Responsive font size for mobile */
+      margin-top: 5rem; /* Adjust top margin for mobile */
+    }
+  }
+  
