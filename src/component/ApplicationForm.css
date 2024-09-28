@@ -1,0 +1,38 @@
+/* Custom Form Styles */
+.colorful-heading {
+    color: #fff;
+    background-color:rgb(84, 81, 80);
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .colorful-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .colorful-form label {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .colorful-form input, 
+  .colorful-form textarea {
+    border: 2px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .submit-btn {
+    background-color: #a72839 !important;
+    border: none !important;
+    font-size: 1.2rem;
+
+  }
+  
+  .submit-btn:hover {
+    background-color:  #a72839 !important
+  }
+  

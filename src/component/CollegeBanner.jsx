@@ -1,8 +1,14 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { useNavigate } from 'react-router-dom';
 const CollegeApplication = () => {
+  const navigate = useNavigate();
+  function handleClick(){
+    navigate('/ApplicationForm')
+  }
+   
+  
   return (
     <Container fluid className="py-5 text-center" style={{ backgroundColor: '#f9f9f9' }}>
       {/* First Line */}
@@ -33,8 +39,8 @@ const CollegeApplication = () => {
               padding: '10px 20px',
               fontSize: '1.2rem',
             }}
-          >
-            Apply Now
+           onClick={handleClick}>
+            Apply Now 
           </Button>
         </Col>
       </Row>
