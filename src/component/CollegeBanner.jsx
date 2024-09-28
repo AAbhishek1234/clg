@@ -38,7 +38,6 @@ const CollegeApplication = () => {
           </Button>
         </Col>
       </Row>
-
       {/* Inline CSS for responsive typography */}
       <style jsx>{`
         .first-line {

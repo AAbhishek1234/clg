@@ -206,7 +206,7 @@ const App = () => {
             <Card.Body>
               <Card.Title className="custom-title" >  Apply with one form in 5 minute</Card.Title>
               <ul className="custom-list">
-            
+              Fill your college applications in 5 minutes or less.
               </ul>
             </Card.Body>
           </Card>
@@ -218,7 +218,7 @@ const App = () => {
             <Card.Body>
               <Card.Title className="custom-title">Talk to admission expert</Card.Title>
               <ul className="custom-list">
-                
+              Get free personalised expert guidance on colleges & courses
               </ul>
             </Card.Body>
           </Card>
@@ -230,13 +230,12 @@ const App = () => {
             <Card.Body>
               <Card.Title className="custom-title">Get your career match</Card.Title>
               <ul className="custom-list">
-              
+              Take our free career compass personality quiz and get top career options for you.
               </ul>
             </Card.Body>
           </Card>
         </Col>
       </Row>
-
      
 
       {/* Inline CSS for styling */}
@@ -294,6 +293,7 @@ const App = () => {
         }
       `}</style>
     </Container>
+    
   );
 };
 
