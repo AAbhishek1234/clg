@@ -116,7 +116,7 @@ const ImageSlider = () => {
             Find the best college here!!
           </h1>
           {/* Search Form */}
-          <Form className="d-flex" style={{ maxWidth: "30rem", width: '100%', height: "3rem",marginLeft:"3rem" }}>
+          <Form className="d-flex" style={{ maxWidth: "30rem", width: '100%', height: "3rem",marginLeft:"7rem" }}>
             <FormControl
               type="search"
               placeholder="Search for college, course or location..."
@@ -141,7 +141,7 @@ const ImageSlider = () => {
             Find the best college here!!
           </h1>
           {/* Search Form */}
-          <Form className="d-flex" style={{ maxWidth: "30rem", width: '100%', height: "3rem", marginLeft:"3rem" }}>
+          <Form className="d-flex" style={{ maxWidth: "30rem", width: '100%', height: "3rem", marginLeft:"7rem" }}>
             <FormControl
               type="search"
               placeholder="Search for college, course or location..."
@@ -166,7 +166,7 @@ const ImageSlider = () => {
             Find the best college here!!
           </h1>
           {/* Search Form */}
-          <Form className="d-flex" style={{ maxWidth: "30rem", width: '100%', height: "3rem",marginLeft:"3rem" }}>
+          <Form className="d-flex" style={{ maxWidth: "30rem", width: '100%', height: "3rem",marginLeft:"7rem"  }}>
             <FormControl
               type="search"
               placeholder="Search for college, course or location..."

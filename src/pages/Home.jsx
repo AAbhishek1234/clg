@@ -12,6 +12,7 @@ function Home() {
     <SelectGoal></SelectGoal>
     <CollegeBaanner></CollegeBaanner>
     <Footer></Footer>
+   
     
     </>
   )

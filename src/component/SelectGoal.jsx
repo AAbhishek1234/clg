@@ -174,75 +174,60 @@
 
 
 
-
-import React, { useRef } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Card, Row, Col, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
-  const scrollRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        top: 0,
-        left: direction === 'left' ? -300 : 300,
-        behavior: 'smooth',
-      });
-    }
-  };
-
+  const navigate = useNavigate();
+  function handleClick(){
+    navigate('/ApplicationForm')
+  }
+  function callClick(){
+    navigate('/ExpertCall')
+  }
+   
+   
   return (
     <Container fluid className="py-5">
       {/* Responsive heading */}
-      <h2 className="responsive-heading text-center mb-4" style={{fontWeight:"bold",fontSize:"36px",color:"#333"}}>
+      <h2 className="responsive-heading text-center mb-4" style={{ fontWeight: "bold", fontSize: "36px", color: "#333" }}>
         College Search Made Easy
       </h2>
 
       <Row className="justify-content-center">
         {/* Management Colleges */}
-        <Col xs={12} md={4} className="mb-4 d-flex justify-content-center">
-          <Card className="custom-card text-center"style={{backgroundColor:"lightblue"}}>
-            <Card.Body>
-              <Card.Title className="custom-title" >  Apply with one form in 5 minute</Card.Title>
+        <Col xs={12} sm={10} md={6} lg={5} className="mb-4 d-flex justify-content-center" onClick={handleClick}>
+          <Card className="custom-card text-center" style={{ backgroundColor: "lightblue" }} >
+            <Card.Body className="d-flex flex-column justify-content-center">
+              <Card.Title className="custom-title">Apply with one form in 5 minutes</Card.Title>
               <ul className="custom-list">
-              Fill your college applications in 5 minutes or less.
+                Fill your college applications in 5 minutes or less.
               </ul>
             </Card.Body>
           </Card>
         </Col>
 
         {/* Engineering Colleges */}
-        <Col xs={12} md={4} className="mb-4 d-flex justify-content-center">
-          <Card className="custom-card text-center"style={{backgroundColor:"lightblue"}}>
-            <Card.Body>
+        <Col xs={12} sm={10} md={6} lg={5} className="mb-4 d-flex justify-content-center" onClick={callClick}>
+          <Card className="custom-card text-center" style={{ backgroundColor: "lightblue" }}>
+            <Card.Body className="d-flex flex-column justify-content-center">
               <Card.Title className="custom-title">Talk to admission expert</Card.Title>
               <ul className="custom-list">
-              Get free personalised expert guidance on colleges & courses
-              </ul>
-            </Card.Body>
-          </Card>
-        </Col>
-
-        {/* Science Colleges */}
-        <Col xs={12} md={4} className="mb-4 d-flex justify-content-center">
-          <Card className="custom-card text-center"style={{backgroundColor:"lightblue"}}>
-            <Card.Body>
-              <Card.Title className="custom-title">Get your career match</Card.Title>
-              <ul className="custom-list">
-              Take our free career compass personality quiz and get top career options for you.
+                Get free personalized expert guidance on colleges & courses.
               </ul>
             </Card.Body>
           </Card>
         </Col>
       </Row>
-     
 
       {/* Inline CSS for styling */}
       <style jsx>{`
         .custom-card {
           width: 100%;
-          max-width: 300px; /* Ensure the card has a fixed max width */
+          max-width: 600px; /* Increased max width */
+          min-height: 250px; /* Adjusted height */
           border-radius: 10px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
           transition: transform 0.2s;
@@ -254,7 +239,7 @@ const App = () => {
         }
 
         .custom-title {
-          font-size: 1.5rem;
+          font-size: 1.8rem; /* Slightly larger title */
           font-weight: bold;
           margin-bottom: 1rem;
         }
@@ -267,7 +252,7 @@ const App = () => {
 
         .custom-list li {
           margin: 8px 0;
-          font-size: 1rem;
+          font-size: 1.1rem;
         }
 
         /* Responsive heading */
@@ -284,18 +269,21 @@ const App = () => {
           }
 
           .custom-title {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
           }
 
           .custom-list li {
-            font-size: 0.9rem;
+            font-size: 1rem;
+          }
+
+          .custom-card {
+            max-width: 100%; /* Full width on mobile */
+            min-height: 280px; /* Adjusted height for smaller screens */
           }
         }
       `}</style>
     </Container>
-    
   );
 };
 
 export default App;
-
