@@ -43,7 +43,7 @@ const TestimonialCarousel = () => {
           <h2 className="text-center mb-4" style={{fontWeight:"bold"}}>Student's Feedback</h2>
         </Col>
       </Row>
-      <Carousel indicators={false} interval={2000} className="testimonial-carousel">
+      <Carousel indicators={false} interval={3000} className="testimonial-carousel">
         {/* Create two slides with 3 cards each for a total of 6 cards */}
         {[0, 3].map((startIdx) => (
           <Carousel.Item key={startIdx}>
