@@ -40,7 +40,7 @@ const TestimonialCarousel = () => {
     <Container fluid className="testimonial-container">
       <Row>
         <Col>
-          <h2 className="text-center mb-4" style={{fontWeight:"bold"}}>Our Student's Feedback</h2>
+          <h2 className="text-center mb-4" style={{fontWeight:"bold"}}>Student's Feedback</h2>
         </Col>
       </Row>
       <Carousel indicators={false} interval={3000} className="testimonial-carousel">
