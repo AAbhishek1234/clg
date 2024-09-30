@@ -84,9 +84,9 @@ const ResponsiveNavbar = () => {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="me-auto" style={{color:"white"}}>
             {/* Location Selector with Google Map Link */}
-            <Nav.Link href="https://www.google.com/maps/place/YOUR_LOCATION_LINK" target="_blank">
+            {/* <Nav.Link href="https://www.google.com/maps/place/YOUR_LOCATION_LINK" target="_blank">
               <MdLocationOn size={25} />
-            </Nav.Link>
+            </Nav.Link> */}
           </Nav>
 
           {/* Search Bar */}

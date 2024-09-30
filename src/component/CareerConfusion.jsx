@@ -14,7 +14,7 @@ const CareerRecommendation = () => {
           <p style={{fontSize:"20px",fontWeight:"400"}}>
             Discover your path with college.Explore your interest in various graduation streams and get advice guidance free.
           </p>
-          <Button variant="warning" size="lg" style={{backgroundColor:" #F87217",border:"none"}} onClick={handleClick}>Get your path</Button>
+          <Button variant="warning" size="lg" style={{backgroundColor:" #F87217 "}} onClick={handleClick}>Get your path</Button>
         </Col>
       </Row>
     </Container>

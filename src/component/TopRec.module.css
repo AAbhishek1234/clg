@@ -1,0 +1,20 @@
+/* ImageSlider.css */
+.carousel-item img {
+    height: 400px; /* Adjust height of images */
+    object-fit: cover; /* Ensures images cover the entire space */
+    
+  
+  }
+ 
+  
+  .carousel-caption h3 {
+    font-size: 24px; /* Adjust caption text size */
+    color: white; /* Make text color white */
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-caption h3 {
+      font-size: 18px; /* Smaller text on small screens */
+    }
+  }
+  
