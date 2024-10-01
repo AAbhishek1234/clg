@@ -34,7 +34,7 @@ const ApplicationForm = () => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:4000/student/data', {
+      const response = await fetch('https://collegeserverone.onrender.com/student/data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
