@@ -8,29 +8,31 @@ const AdminPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // New state to manage authentication
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const CONSTANT_PASSWORD = "yourConstantPassword"; // Replace with your actual constant password
+  const CONSTANT_PASSWORD = "college"; // Set your constant password here
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setMessage('');
     setError('');
 
+    // Check if the password entered is correct
     if (password !== CONSTANT_PASSWORD) {
       setError('Incorrect password. Please try again.');
       return;
     }
 
+    // If the password is correct, fetch student data
     try {
-      const response = await fetch('https://collegeserverone.onrender.com/student/data'); 
+      const response = await fetch('https://collegeserverone.onrender.com/student/data');
       if (!response.ok) {
         throw new Error('Failed to fetch student data');
       }
       const data = await response.json();
       setStudents(data);
       setFilteredStudents(data);
-      setIsAuthenticated(true); // Set authentication to true upon successful login
+      setIsAuthenticated(true); // User is authenticated now
       setMessage('Student data retrieved successfully!');
     } catch (error) {
       setError('Failed to retrieve student data. Please try again.');
@@ -49,8 +51,8 @@ const AdminPage = () => {
   return (
     <Container className="mt-5">
       <h2 className="text-center mb-4">Admin Access</h2>
-      
-      {/* Only show password form if not authenticated */}
+
+      {/* Render password input form if not authenticated */}
       {!isAuthenticated ? (
         <Form onSubmit={handleSubmit} className="p-4">
           <Form.Group controlId="formPassword">
