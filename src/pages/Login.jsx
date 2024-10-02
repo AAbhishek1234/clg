@@ -11,7 +11,7 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/admin/login', {
+      const response = await axios.get('http://localhost:5000/admin/login', {
         email,
         password,
       });
