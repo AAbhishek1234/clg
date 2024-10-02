@@ -12,7 +12,7 @@ const AdminLogin = () => {
         e.preventDefault();
         try {
             const response = await fetch('https://collegeserverone.onrender.com/admin/login', {
-                method: 'POST',
+                method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
                 },
