@@ -121,7 +121,7 @@ const AdminDashboard = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    navigate("/"); // Redirect to home page after logout
+    navigate("/login"); // Redirect to home page after logout
   };
 
   return (
