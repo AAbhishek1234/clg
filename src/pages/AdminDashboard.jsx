@@ -94,7 +94,7 @@ const AdminDashboard = () => {
     //   return;
     // }
     if(!token){
-      navigate('/admin/login')
+      navigate('/login')
     }
 
     const fetchStudents = async () => {
