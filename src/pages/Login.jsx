@@ -81,7 +81,7 @@ const AdminLogin = () => {
 
       localStorage.setItem('token', response.data.token);  // Store token in localStorage for persistence
       setError('');
-      alert('Login successful!');
+      //alert('Login successful!');
       window.location.href = '/admin/dashboard';  // Redirect to the admin dashboard
     } catch (error) {
       setError('Invalid email or password');
