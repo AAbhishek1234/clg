@@ -14,7 +14,7 @@ const AdminDashboard = () => {
 
     const fetchStudents = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/admin/students', {
+        const response = await axios.get('https://collegeserverone.onrender.com/admin/students', {
           headers: {
             Authorization: `Bearer ${token}`,  // Include token in request headers
           },
