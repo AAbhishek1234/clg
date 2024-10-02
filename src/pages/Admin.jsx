@@ -5,21 +5,24 @@ const AdminLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [token, setToken] = useState('');
 
+  // Handle form submission
   const handleLogin = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission (GET request)
 
     try {
       const response = await axios.post('http://localhost:5000/admin/login', {
         email,
         password,
       });
-      const token = response.data.token;
-      localStorage.setItem('token', token);  // Store token in localStorage for persistence
 
+      // Save the token and set success/error message
+      setToken(response.data.token);
+      localStorage.setItem('token', response.data.token);  // Store token in localStorage for persistence
       setError('');
       alert('Login successful!');
-      
+
       // Redirect to the dashboard or student details page
       window.location.href = '/admin/dashboard';  // Example of redirecting to the admin dashboard
     } catch (error) {
