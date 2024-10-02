@@ -10,7 +10,7 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('https://collegeserverone.onrender.com/admin/login', {
+      const response = await axios.post('http://localhost:5000/admin/login', {
         email,
         password,
       });
