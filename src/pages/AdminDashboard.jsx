@@ -77,12 +77,14 @@
 
 
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Container, Row, Col, Table, Alert, Card } from 'react-bootstrap';
+import { Container, Row, Col, Table, Alert, Card, Button } from 'react-bootstrap';
 
 const AdminDashboard = () => {
   const [students, setStudents] = useState([]);
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -114,10 +116,21 @@ const AdminDashboard = () => {
     fetchStudents();
   }, []);
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/"); // Redirect to home page after logout
+  };
+
   return (
-    <Container fluid className="my-5">
+    <Container fluid className="my-5" style={{ backgroundColor: '#f8f9fa' }}>
       <Row className="justify-content-center">
         <Col xs={12} md={10} lg={8}>
+          {/* Logout Button */}
+          <Button variant="danger" onClick={handleLogout} className="mb-3">
+            Logout
+          </Button>
+
+          {/* Card with Table */}
           <Card className="shadow-lg">
             <Card.Header className="bg-primary text-white">
               <h3>Student List</h3>
