@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import ApplicationForm from './component/ApplicatonForm';
 import ExpertCall from './component/ExpertCall'
 import Admin from './pages/Admin'
+import Login from './pages/Login'
 function App() {
   return (
     <>
@@ -13,6 +14,7 @@ function App() {
     <Route path='/ApplicationForm' element={<ApplicationForm/>}/>
     <Route path='/ExpertCall' element={<ExpertCall/>}/>
     <Route path='/Admin'element={<Admin/>}/>
+    <Route path='/Login' element={<Login/>}/>
     </Routes>
         </Router>
     </>
