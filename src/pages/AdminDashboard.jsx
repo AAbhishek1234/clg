@@ -60,7 +60,7 @@ const AdminDashboard = () => {
               <tr key={student._id}>
                 <td>{student.name}</td>
                 <td>{student.email}</td>
-                <td>{student.phoneNo}</td>
+                <td>{student.phoneno}</td>
                 <td>{student.location}</td>
               </tr>
             ))}
