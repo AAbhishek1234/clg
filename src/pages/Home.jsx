@@ -8,6 +8,8 @@ import Footer from '../component/Footer'
 import CollegeSection from '../component/CollegeSelection'
 import TopRecomandation from '../component/TopRecomandation'
 import TestimonialCarousel from '../component/Testimonial'
+// import Login from '../pages/Login'
+// import Admin from '../pages/Admin'
 function Home() {
   return (
     <>
@@ -21,7 +23,8 @@ function Home() {
     <TopRecomandation></TopRecomandation>
     <TestimonialCarousel></TestimonialCarousel>
     <Footer></Footer>
-   
+   {/* <Login></Login> */}
+   {/* <Admin></Admin> */}
     
     </>
   )
