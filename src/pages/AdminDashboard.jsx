@@ -88,10 +88,13 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    if (!token) {
-      alert('You must be logged in to view this page');
-      window.location.href = '/admin/login'; // Redirect to login if no token
-      return;
+    // if (!token) {
+    //   alert('You must be logged in to view this page');
+    //   window.location.href = '/admin/login'; // Redirect to login if no token
+    //   return;
+    // }
+    if(!token){
+      navigate('/admin/login')
     }
 
     const fetchStudents = async () => {
