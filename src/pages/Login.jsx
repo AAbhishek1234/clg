@@ -11,10 +11,12 @@ const AdminLogin = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.get('http://localhost:5000/admin/login', {
+      // Change axios.get to axios.post to send a POST request
+      const response = await axios.post('https://collegeserverone.onrender.com/admin/login', {
         email,
         password,
       });
+
       setToken(response.data.token);
       localStorage.setItem('token', response.data.token);  // Store token in localStorage for persistence
       setError('');
