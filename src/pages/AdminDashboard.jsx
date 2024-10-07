@@ -150,6 +150,7 @@ const AdminDashboard = () => {
                       <th>Email</th>
                       <th>Phone Number</th>
                       <th>Location</th>
+                      <th>Date</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -159,6 +160,7 @@ const AdminDashboard = () => {
                         <td>{student.email}</td>
                         <td>{student.phoneno}</td>
                         <td>{student.location}</td>
+                        <td>{student.createdAt}</td>
                       </tr>
                     ))}
                   </tbody>
