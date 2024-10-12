@@ -101,7 +101,7 @@ const AdminDashboard = () => {
       try {
         const response = await axios.get('https://collegeserverone.onrender.com/admin/students', {
           headers: {
-            Authorization: `Bearer ${token}`, // Include token in request headers
+            Authorization: `Bearer ${token}`, 
           },
         });
         setStudents(response.data);
@@ -117,12 +117,16 @@ const AdminDashboard = () => {
     };
 
     fetchStudents();
-  }, []);
+  }, [navigate]);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
     navigate("/login"); // Redirect to home page after logout
   };
+
+
+
+
 
   return (
     <Container fluid className="my-5" style={{ backgroundColor: '#f8f9fa' }}>

@@ -7,7 +7,7 @@ const ApplicationForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phoneno: '', // Change from phoneNumber to phoneno
+    phoneno: '', 
     location: '',
   });
   
@@ -18,7 +18,6 @@ const ApplicationForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // Restrict phone number input to 10 digits
     if (name === 'phoneno' && value.length > 10) {
       return;
     }
@@ -34,31 +33,32 @@ const ApplicationForm = () => {
     setError('');
 
     try {
-      const response = await fetch('https://collegeserverone.onrender.com/student/data', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+        const response = await fetch('https://collegeserverone.onrender.com/student/data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
 
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Error: ${errorText}`);
-      }
+        if (!response.ok) {
+            const errorText = await response.text();
+            console.error('Server error:', errorText); // Log the server error
+            throw new Error(`Error: ${errorText}`);
+        }
 
-      const result = await response.json();
-      console.log('Student created:', result);
-      
-      setMessage('Your application has been submitted successfully!');
-      setFormData({ name: '', email: '', phoneno: '', location: '' }); // Reset form data
-
-      navigate('/'); 
+        const result = await response.json();
+        console.log('Student created:', result);
+        
+        setMessage('Your application has been submitted successfully!');
+        setFormData({ name: '', email: '', phoneno: '', location: '' }); 
+        navigate('/'); 
     } catch (error) {
-      console.error('Error submitting data:', error);
-      setError('Failed to submit your application. Please try again.');
+        console.error('Error submitting data:', error); // Log error
+        setError('Failed to submit your application. Please try again.');
     }
-  };
+};
+
 
   return (
     <Container className="mt-5">
