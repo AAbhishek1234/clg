@@ -153,7 +153,8 @@ const AdminDashboard = () => {
                       <th>Name</th>
                       <th>Email</th>
                       <th>Phone Number</th>
-                      <th>Location</th>
+                      <th>Stream </th>
+                      <th>School Name</th>
                       <th>Date</th>
                     </tr>
                   </thead>
@@ -163,7 +164,9 @@ const AdminDashboard = () => {
                         <td>{student.name}</td>
                         <td>{student.email}</td>
                         <td>{student.phoneno}</td>
+                        <td>{student.stream}</td>
                         <td>{student.location}</td>
+
                         <td>{student.createdAt}</td>
                       </tr>
                     ))}

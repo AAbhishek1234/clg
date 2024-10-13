@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { FiPhoneCall } from 'react-icons/fi'; // Phone call icon
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from '../component/Footer'
+// import Footer from '../component/Footer'
 const ExpertContact = () => {
   const experts = [
     { name: 'Jane Smith', phone: '+1 987 654 321' },
@@ -32,7 +32,7 @@ const ExpertContact = () => {
           </Col>
         ))}
       </Row>
-      <Footer/>
+      {/* <Footer/> */}
 
       {/* Inline CSS for styling */}
       <style jsx>{`

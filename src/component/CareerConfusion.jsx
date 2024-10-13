@@ -10,11 +10,11 @@ const CareerRecommendation = () => {
     <Container fluid className="text-center py-5" style={{ backgroundColor: ' #FEF0E3' }}>
       <Row className="justify-content-center">
         <Col md={8} lg={6}>
-          <h2>If you are 11th,12th  and confused about the best career choice,talk to us</h2>
+          <h2>If you are passing out 12th class and confused about the best career choice, talk to our expert!</h2>
           <p style={{fontSize:"20px",fontWeight:"400"}}>
-            Discover your path with college.Explore your interest in various graduation streams and get advice guidance free.
+           Explore your interest in various graduation streams. Discover the career and college of your choice.
           </p>
-          <Button variant="warning" size="lg" style={{backgroundColor:" #F87217 "}} onClick={handleClick}>Get your path</Button>
+          <Button variant="warning" size="lg" style={{backgroundColor:" #F87217 "}} onClick={handleClick}>Get started</Button>
         </Col>
       </Row>
     </Container>

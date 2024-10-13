@@ -7,8 +7,10 @@ const ApplicationForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phoneno: '', 
+    phoneno: '',
+    stream:'', 
     location: '',
+
   });
   
   const [message, setMessage] = useState('');
@@ -51,7 +53,7 @@ const ApplicationForm = () => {
         console.log('Student created:', result);
         
         setMessage('Your application has been submitted successfully!');
-        setFormData({ name: '', email: '', phoneno: '', location: '' }); 
+        setFormData({ name: '', email: '', phoneno: '', stream:'',location: '' }); 
         navigate('/'); 
     } catch (error) {
         console.error('Error submitting data:', error); // Log error
@@ -79,7 +81,7 @@ const ApplicationForm = () => {
             </Form.Group>
 
             <Form.Group controlId="formEmail">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Email Address</Form.Label>
               <Form.Control
                 type="email"
                 placeholder="Enter your email"
@@ -102,12 +104,31 @@ const ApplicationForm = () => {
               />
             </Form.Group>
 
-            <Form.Group controlId="formAddress">
-              <Form.Label>City/Village/State</Form.Label>
+
+
+
+            <Form.Group controlId="formstream">
+              <Form.Label>Stream in 12th class</Form.Label>
               <Form.Control
-                as="textarea"
-                rows={3}
-                placeholder="Enter your address"
+                type="text"
+                placeholder="Enter your stream in 12th class"
+                name="stream"
+                value={formData.stream}
+                onChange={handleChange}
+                required
+              />
+            </Form.Group>
+
+
+
+
+
+
+            <Form.Group controlId="formAddress">
+              <Form.Label>School Name/City</Form.Label>
+              <Form.Control
+              type="text"
+                placeholder="Enter your school name"
                 name="location"
                 value={formData.location}
                 onChange={handleChange}

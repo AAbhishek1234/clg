@@ -12,8 +12,8 @@ const CollegeSection = () => {
   ];
 
   const importantExams = ['JEE Main', 'JEE Advanced', 'TS EAMCET', 'WBJEE', 'VITEEE'];
-  const topStates = ['Maharashtra', 'Uttar Pradesh', 'Karnataka', 'Rajasthan', 'Punjab'];
-  const relatedCourses = [
+  const Statewisecolleges = ['Maharashtra', 'Uttar Pradesh', 'Karnataka', 'Rajasthan', 'Punjab'];
+  const Courseswisecolleges = [
     'B Tech',
     'Bachelor of Engineering',
     'Civil Engineering',
@@ -60,10 +60,10 @@ const CollegeSection = () => {
         {/* Top States */}
         <Col lg={3} md={6} sm={12} className="mb-4">
           <Card className={`p-3 ${styles.card}`}>
-            <h5>Top States</h5>
-            {topStates.map((state, idx) => (
+            <h5>State wise colleges</h5>
+            {Statewisecolleges.map((Statewisecolleges, idx) => (
               <Button key={idx} className={`mb-2 ${styles.button}`}>
-                {state}
+                {Statewisecolleges}
               </Button>
             ))}
           </Card>
@@ -72,10 +72,10 @@ const CollegeSection = () => {
         {/* Related Courses */}
         <Col lg={3} md={6} sm={12} className="mb-4">
           <Card className={`p-3 ${styles.card}`}>
-            <h5>Related Courses</h5>
-            {relatedCourses.map((course, idx) => (
+            <h5>Courses wise colleges</h5>
+            {Courseswisecolleges.map((Courseswisecolleges, idx) => (
               <Button key={idx} className={`mb-2 ${styles.button}`}>
-                {course}
+                {Courseswisecolleges}
               </Button>
             ))}
           </Card>
