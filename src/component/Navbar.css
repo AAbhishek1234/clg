@@ -1,6 +1,28 @@
 #courses-nav-dropdown{
     color: white !important;
 }
-#careers-nav-dropdown{
+#colleges-nav-dropdown{
     color: white !important;
 }
+.nested-dropdown {
+    position: absolute; /* Position it absolutely */
+    left: 100%; /* Position it to the right of the parent item */
+    top: 0; /* Align it to the top */
+    background-color:white !important; /* Match the dropdown background color */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Optional: Add a border */
+    z-index: 999; /* Ensure it appears above other elements */
+    min-width: 150px; /* Optional: Minimum width for submenu */
+    padding: 0; /* Reset padding */
+    display: block; /* Ensure it is displayed as block */
+    border-radius: 5px;
+  }
+  
+  .nested-dropdown .nav-item {
+    padding: 0.5rem 1rem; /* Adjust padding for submenu items */
+    color: white; /* Text color for submenu */
+  }
+  
+  .nested-dropdown .nav-item:hover {
+    background-color: rgba(49, 47, 47, 0.1); /* Optional: Change background on hover */
+  }
+  

@@ -26,7 +26,7 @@ const CollegeSection = () => {
       {/* Heading */}
       <Row className={`text-center mb-4 ${styles.heading}`}>
         <Col>
-          <h2 className={styles.title}>Perfect College For You</h2>
+          <h2 className={styles.title}>Find the perfect college of your choice</h2>
           <p>Discover top colleges, exams, and opportunities in your preferred field.</p>
         </Col>
       </Row>

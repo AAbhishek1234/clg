@@ -1,94 +1,29 @@
-// import React from 'react';
-// import { Navbar, Nav, Form, Button, FormControl, Container } from 'react-bootstrap';
-// import { FaUserCircle } from 'react-icons/fa';
-// import { MdLocationOn } from 'react-icons/md';
 
-// const ResponsiveNavbar = () => {
-//   return (
-//     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-//       <Container>
-//         {/* Logo */}
-//         <Navbar.Brand href="/">
-//           <img
-//             src="/Images/collegelogo.png" // Replace with your logo URL
-//             alt="Logo"
-//             style={{ width: '40px', marginRight: '10px' }}
-//           />
-//           College
-//         </Navbar.Brand>
-
-//         {/* Toggle for Mobile View */}
-//         <Navbar.Toggle aria-controls="navbar-nav" />
-//         <Navbar.Collapse id="navbar-nav">
-//           <Nav className="me-auto">
-//             {/* Location Selector */}
-//             <Nav.Link href="#location">
-//               <MdLocationOn size={25} />
-//             </Nav.Link>
-//           </Nav>
-
-//           {/* Search Bar */}
-//           <Form className="d-flex mx-auto" style={{ maxWidth: "30rem", flexGrow: 1 }}>
-//             <FormControl
-//               type="search"
-//               placeholder="Search for college, course or location..."
-//               className="mr-2"
-//               aria-label="Search"
-//             />
-//             <Button variant="danger" style={{ marginLeft: "10px" }}>Search</Button>
-//           </Form>
-
-//           {/* Need Counselling Button */}
-//           <Nav className="ms-auto">
-//             <Nav.Link href="#counseling" className="btn btn-danger ms-3">
-//               Need Counselling
-//             </Nav.Link>
-//           </Nav>
-
-//           {/* Profile Icon */}
-//           <Nav>
-//             <Nav.Link href="#profile">
-//               <FaUserCircle size={30} />
-//             </Nav.Link>
-//           </Nav>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//   );
-// };
-
-// export default ResponsiveNavbar;
-
-
-
-
-
-
-
-
-
-
-
-
-///////--------------------------2222222222222222222222-------------///
 // import React from 'react';
 // import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 // import { FaUserCircle } from 'react-icons/fa';
-
+// import './Navbar.css'
 // const ResponsiveNavbar = () => {
 //   // Example course names
+//   const colleges = [
+//     "Jb Knowledge Park",
+//     "Pt LR",
+//     "NGF",
+//     "SRCM",
+//     "Advance "
+//   ];
+
 //   const courses = [
 //     "Computer Science",
-//     "Business Administration",
+//     "Management ",
 //     "Mechanical Engineering",
 //     "Electrical Engineering",
 //     "Civil Engineering",
-//   ];
+//     "Science",
+//     "Pharmacy",
+//     "Law",
+//     "Mass Communication"
 
-//   const careers = [
-//     "Software Engineer",
-//     "Data Scientist",
-//     "Mechanical Engineer",
 //   ];
 
 //   return (
@@ -101,42 +36,39 @@
 //             alt="Logo"
 //             style={{ width: '40px', marginRight: '10px' }}
 //           />
-//           College
+//           Colleges
 //         </Navbar.Brand>
 
 //         {/* Toggle for Mobile View */}
 //         <Navbar.Toggle aria-controls="navbar-nav" />
 //         <Navbar.Collapse id="navbar-nav">
 //           <Nav className="me-auto" style={{ color: "white" }}>
-//             {/* Add other links */}
-          
+//             {/* Placeholder to keep space for other links */}
+//           </Nav>
 
+//           <Nav className="ms-auto d-flex align-items-center">
 //             {/* Course Dropdown */}
-//             <NavDropdown title="Courses" id="courses-nav-dropdown">
-//               {courses.map((course, index) => (
-//                 <NavDropdown.Item href={`#${course.toLowerCase().replace(/\s+/g, '-')}`} key={index}>
-//                   {course}
+//             <NavDropdown title="Colleges" id="courses-nav-dropdown" className="mx-2">
+//               {colleges.map((colleges, index) => (
+//                 <NavDropdown.Item href={`#${colleges.toLowerCase().replace(/\s+/g, '-')}`} key={index}>
+//                   {colleges}
 //                 </NavDropdown.Item>
 //               ))}
 //             </NavDropdown>
 
 //             {/* Careers Dropdown */}
-//             <NavDropdown title="Careers" id="careers-nav-dropdown">
-//               {careers.map((career, index) => (
-//                 <NavDropdown.Item href={`#${career.toLowerCase().replace(/\s+/g, '-')}`} key={index}>
-//                   {career}
+//             <NavDropdown title="Courses" id="careers-nav-dropdown" className="mx-2">
+//               {courses.map((courses, index) => (
+//                 <NavDropdown.Item href={`#${courses.toLowerCase().replace(/\s+/g, '-')}`} key={index}>
+//                   {courses}
 //                 </NavDropdown.Item>
 //               ))}
 //             </NavDropdown>
 
-           
-//           </Nav>
-
-//           {/* Need Counselling Button */}
-//           <Nav className="ms-auto">
+//             {/* Need Counselling Button */}
 //             <Nav.Link
 //               href="#counseling"
-//               className="btn"
+//               className="btn mx-2"
 //               style={{
 //                 backgroundColor: "red",
 //                 color: "white",
@@ -173,33 +105,87 @@
 
 
 
-/////////////////////////=---------3-------===///////////////
-import React from 'react';
+
+
+
+
+
+
+///////////////////////-------PRACTICE-------------////////////////////////
+import React, { useState } from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { FaUserCircle } from 'react-icons/fa';
-import './Navbar.css'
+import './Navbar.css';
+
 const ResponsiveNavbar = () => {
-  // Example course names
+  const [showSubDropdown, setShowSubDropdown] = useState(null); // Track which college's sub-dropdown is shown
+
   const colleges = [
-    "Jb Knowledge Park",
-    "Pt LR",
-    "NGF",
-    "SRCM",
-    "Advance "
+    {
+      name: "Colleges in Delhi Ncr",
+      subOptions: ["Delhi University", "Jamia Millia Islamia", "Deen Dayal Upadhyaya College","Indian Institute of Technology (IIT) Delhi","Lady Shri Ram College for Women","Indraprastha Institute of Information Technology","",],
+    },
+    {
+      name: "Colleges in Haryana",
+      subOptions: ["Maharishi Markandeshwar University", "J.C Bose University","Jb knowldege Park","Maharishi Dayanand University","NJF college","SRCET"],
+    },
+    {
+      name: "Colleges in Rajasthan",
+      subOptions: ["ghi", "jkl"],
+    },
+    {
+      name: "Colleges in Uttarakhand",
+      subOptions: ["ghi", "jkl"],
+    },
+    {
+      name: "Colleges in Chandigarh",
+      subOptions: ["ghi", "jkl"],
+    },
+    {
+      name: "Colleges in Punjab",
+      subOptions: ["ghi", "jkl"],
+    },
+    {
+      name: "Colleges in Uttar Pradesh",
+      subOptions: ["ghi", "jkl"],
+    },
+    {
+      name: "Colleges in Maharashtra",
+      subOptions: ["ghi", "jkl"],
+    },
   ];
 
   const courses = [
     "Computer Science",
-    "Management ",
+    "Management",
     "Mechanical Engineering",
     "Electrical Engineering",
     "Civil Engineering",
     "Science",
     "Pharmacy",
     "Law",
-    "Mass Communication"
-
+    "Mass Communication",
   ];
+
+  // Function to toggle showing sub-options on click
+  const handleCollegeClick = (collegeName) => {
+    // If in mobile view, toggle sub-dropdown; otherwise do nothing
+    setShowSubDropdown(showSubDropdown === collegeName ? null : collegeName);
+  };
+
+  const handleMouseEnter = (collegeName) => {
+    // Only show on hover if not in mobile view
+    if (!isMobile) {
+      setShowSubDropdown(collegeName);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setShowSubDropdown(null);
+  };
+
+  // Function to check if the device is mobile
+  const isMobile = window.innerWidth <= 768; // You can adjust this value based on your responsive design
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
@@ -217,25 +203,48 @@ const ResponsiveNavbar = () => {
         {/* Toggle for Mobile View */}
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
-          <Nav className="me-auto" style={{ color: "white" }}>
-            {/* Placeholder to keep space for other links */}
-          </Nav>
+          <Nav className="me-auto" style={{ color: "white" }}></Nav>
 
           <Nav className="ms-auto d-flex align-items-center">
-            {/* Course Dropdown */}
-            <NavDropdown title="Colleges" id="courses-nav-dropdown" className="mx-2">
-              {colleges.map((colleges, index) => (
-                <NavDropdown.Item href={`#${colleges.toLowerCase().replace(/\s+/g, '-')}`} key={index}>
-                  {colleges}
-                </NavDropdown.Item>
+            {/* Colleges Dropdown with Sub-options */}
+            <NavDropdown
+              title="Top colleges in India"
+              id="colleges-nav-dropdown"
+              className="mx-2"
+              align="end"
+              onMouseLeave={handleMouseLeave} // Close on mouse leave
+            >
+              {colleges.map((college, index) => (
+                <div key={index}>
+                  <NavDropdown.Item
+                    onClick={() => handleCollegeClick(college.name)} // Toggle sub-options on click
+                    onMouseEnter={() => handleMouseEnter(college.name)} // Show sub-options on hover
+                    className="d-flex justify-content-between nav-item"
+                  >
+                    {college.name}
+                  </NavDropdown.Item>
+                  {/* Show sub-options only for the selected college */}
+                  {showSubDropdown === college.name && (
+                    <div className="nested-dropdown">
+                      {college.subOptions.map((subOption, subIndex) => (
+                        <NavDropdown.Item
+                          key={subIndex}
+                          href={`#${subOption.toLowerCase()}`}
+                        >
+                          {subOption}
+                        </NavDropdown.Item>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </NavDropdown>
 
-            {/* Careers Dropdown */}
-            <NavDropdown title="Courses" id="careers-nav-dropdown" className="mx-2">
-              {courses.map((courses, index) => (
-                <NavDropdown.Item href={`#${courses.toLowerCase().replace(/\s+/g, '-')}`} key={index}>
-                  {courses}
+            {/* Courses Dropdown */}
+            <NavDropdown title="Courses" id="courses-nav-dropdown" className="mx-2">
+              {courses.map((course, index) => (
+                <NavDropdown.Item key={index} href={`#${course.toLowerCase().replace(/\s+/g, '-')}`}>
+                  {course}
                 </NavDropdown.Item>
               ))}
             </NavDropdown>
@@ -255,18 +264,16 @@ const ResponsiveNavbar = () => {
             >
               Counselling
             </Nav.Link>
-          </Nav>
 
-          {/* Profile Icon */}
-          <Nav>
+            {/* Profile Icon */}
             <Nav.Link
               href="#profile"
               style={{
-                color: 'white', // Set the color to white
-                textDecoration: 'none', // Remove any text decoration like underline on hover
+                color: 'white',
+                textDecoration: 'none',
               }}
             >
-              <FaUserCircle size={30} style={{ color: 'white', marginLeft: "15px" }} /> {/* White icon color */}
+              <FaUserCircle size={30} style={{ color: 'white', marginLeft: "15px" }} />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
