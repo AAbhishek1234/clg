@@ -6,23 +6,14 @@
 }
 .nested-dropdown {
     position: absolute; /* Position it absolutely */
-    left: 100%; /* Position it to the right of the parent item */
+    left: 100%; /* Position it to the right of the parent */
     top: 0; /* Align it to the top */
-    background-color:white !important; /* Match the dropdown background color */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Optional: Add a border */
-    z-index: 999; /* Ensure it appears above other elements */
-    min-width: 150px; /* Optional: Minimum width for submenu */
-    padding: 0; /* Reset padding */
-    display: block; /* Ensure it is displayed as block */
-    border-radius: 5px;
+    background-color: #343a40; /* Match your navbar color */
+    z-index: 1000; /* Ensure it appears above other elements */
+    padding: 0; /* Adjust padding as needed */
   }
   
-  .nested-dropdown .nav-item {
-    padding: 0.5rem 1rem; /* Adjust padding for submenu items */
-    color: white; /* Text color for submenu */
-  }
-  
-  .nested-dropdown .nav-item:hover {
-    background-color: rgba(49, 47, 47, 0.1); /* Optional: Change background on hover */
+  .nested-dropdown .dropdown-item {
+    white-space: nowrap; /* Prevent text from wrapping */
   }
   

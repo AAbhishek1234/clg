@@ -112,46 +112,47 @@
 
 
 ///////////////////////-------PRACTICE-------------////////////////////////
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import { FaUserCircle } from 'react-icons/fa';
 import './Navbar.css';
 
 const ResponsiveNavbar = () => {
   const [showSubDropdown, setShowSubDropdown] = useState(null); // Track which college's sub-dropdown is shown
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Track if it's mobile view
 
   const colleges = [
     {
       name: "Colleges in Delhi Ncr",
-      subOptions: ["Delhi University", "Jamia Millia Islamia", "Deen Dayal Upadhyaya College","Indian Institute of Technology (IIT) Delhi","Lady Shri Ram College for Women","Indraprastha Institute of Information Technology","",],
+      subOptions: ["Delhi University", "Jamia Millia Islamia", "Deen Dayal Upadhyaya College", "Indian Institute of Technology (IIT) Delhi", "Lady Shri Ram College for Women", "Indraprastha Institute of Information Technology"],
     },
     {
       name: "Colleges in Haryana",
-      subOptions: ["Maharishi Markandeshwar University", "J.C Bose University","Jb knowldege Park","Maharishi Dayanand University","NJF college","SRCET"],
+      subOptions: ["Maharishi Markandeshwar University", "J.C Bose University", "Jb Knowledge Park", "Maharishi Dayanand University", "NJF College", "SRCET"],
     },
     {
       name: "Colleges in Rajasthan",
-      subOptions: ["ghi", "jkl"],
+      subOptions: ["Gyan Vihar University", "Manipal University"],
     },
     {
       name: "Colleges in Uttarakhand",
-      subOptions: ["ghi", "jkl"],
+      subOptions: ["Uttarakhand Technical University", "NIT Uttarakhand"],
     },
     {
       name: "Colleges in Chandigarh",
-      subOptions: ["ghi", "jkl"],
+      subOptions: ["Punjab Engineering College", "Post Graduate Institute of Medical Education and Research"],
     },
     {
       name: "Colleges in Punjab",
-      subOptions: ["ghi", "jkl"],
+      subOptions: ["Panjab University", "Guru Nanak Dev Engineering College"],
     },
     {
       name: "Colleges in Uttar Pradesh",
-      subOptions: ["ghi", "jkl"],
+      subOptions: ["Indian Institute of Technology (IIT) Kanpur", "Dr. APJ Abdul Kalam Technical University"],
     },
     {
       name: "Colleges in Maharashtra",
-      subOptions: ["ghi", "jkl"],
+      subOptions: ["Indian Institute of Technology (IIT) Bombay", "University of Mumbai"],
     },
   ];
 
@@ -170,7 +171,9 @@ const ResponsiveNavbar = () => {
   // Function to toggle showing sub-options on click
   const handleCollegeClick = (collegeName) => {
     // If in mobile view, toggle sub-dropdown; otherwise do nothing
-    setShowSubDropdown(showSubDropdown === collegeName ? null : collegeName);
+    if (isMobile) {
+      setShowSubDropdown(showSubDropdown === collegeName ? null : collegeName);
+    }
   };
 
   const handleMouseEnter = (collegeName) => {
@@ -181,11 +184,20 @@ const ResponsiveNavbar = () => {
   };
 
   const handleMouseLeave = () => {
-    setShowSubDropdown(null);
+    if (!isMobile) {
+      setShowSubDropdown(null);
+    }
   };
 
-  // Function to check if the device is mobile
-  const isMobile = window.innerWidth <= 768; // You can adjust this value based on your responsive design
+  // Update isMobile state on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
@@ -229,7 +241,7 @@ const ResponsiveNavbar = () => {
                       {college.subOptions.map((subOption, subIndex) => (
                         <NavDropdown.Item
                           key={subIndex}
-                          href={`#${subOption.toLowerCase()}`}
+                          href={`#${subOption.toLowerCase().replace(/\s+/g, '-')}`}
                         >
                           {subOption}
                         </NavDropdown.Item>
