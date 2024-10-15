@@ -125,7 +125,7 @@ const ApplicationForm = () => {
 
 
             <Form.Group controlId="formAddress">
-              <Form.Label>School Name/City</Form.Label>
+              <Form.Label>School Name and City</Form.Label>
               <Form.Control
               type="text"
                 placeholder="Enter your school name"

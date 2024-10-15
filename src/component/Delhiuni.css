@@ -1,0 +1,23 @@
+/* App.css */
+
+.slider-container {
+    margin: 20px 0;
+  }
+  
+  .slick-slide {
+    text-align: center;
+    color:black;
+    background:"#f0f0f0"; /* Background color for slider items */
+    border-radius: 10px;
+    padding: 20px;
+    height: 100px; /* Fixed height for consistency */
+  }
+  
+  .slick-prev, .slick-next {
+    z-index: 1; /* Ensure buttons are above the slider content */
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    color: #FA8072; /* Change the arrow color as needed */
+  }
+  

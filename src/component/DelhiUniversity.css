@@ -1,0 +1,44 @@
+/* Add a unique prefix to your classes to avoid conflicts */
+.du-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    padding: 20px;
+  }
+  
+  .du-heading {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px;
+  }
+  
+  .du-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Spacing between cards */
+    max-width: 1200px; /* Max width for the grid */
+    width: 100%; /* Full width for smaller screens */
+  }
+  
+  .du-card {
+    background-color: #f8f9fa; /* Light background for the cards */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for card effect */
+    overflow: hidden; /* Prevent image overflow */
+    transition: transform 0.2s; /* Smooth hover effect */
+  }
+  
+  .du-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+  .du-card-image {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .du-card-title {
+    text-align: center; /* Center the title text */
+    margin: 10px 0; /* Margin for spacing */
+    font-size: 1.2rem; /* Title size */
+  }
+  

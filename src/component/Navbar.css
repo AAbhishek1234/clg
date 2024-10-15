@@ -3,17 +3,30 @@
 }
 #colleges-nav-dropdown{
     color: white !important;
-}
-.nested-dropdown {
-    position: absolute; /* Position it absolutely */
-    left: 100%; /* Position it to the right of the parent */
-    top: 0; /* Align it to the top */
-    background-color: #343a40; /* Match your navbar color */
-    z-index: 1000; /* Ensure it appears above other elements */
-    padding: 0; /* Adjust padding as needed */
+}.nested-dropdown {
+    position: absolute;
+    left: 100%; /* Align submenu to the right */
+    top: 0;
+    background-color: white !important;
+    z-index: 1000;
+    min-width: 200px;
   }
   
-  .nested-dropdown .dropdown-item {
-    white-space: nowrap; /* Prevent text from wrapping */
+  .mobile-dropdown {
+    position: relative;
+    left: 0;
+    top: auto;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .nested-dropdown {
+      position: relative;
+      left: 0;
+      top: auto;
+      margin-top: 0.5rem;
+      width: 100%; /* Full width for mobile */
+    }
   }
   
