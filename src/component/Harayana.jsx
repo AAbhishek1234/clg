@@ -7,15 +7,15 @@ function Harayana() {
 
   const universities = [
     { name: "Kurukshetra University", img: '/Images/kurukshetra.jpg', url: '/kurukshetrauniversity' },
-    { name: "Maharshi Dayanand University", img: '/Images/MDU.png', url: '/jamia-millia-islamia' },
+    { name: "Maharshi Dayanand University", img: '/Images/MDU.png', url: '/mdu' },
     { name: "Echelon Institute of Technology", img: '/Images/echelon.webp', url: '/echelon' },
-    { name: "Guru Jambheshwar University of Science and Technology", img: '/Images/guru jamesh.jpg', url: '/colleges/iit-delhi]' },
-    { name: "Deenbandhu Chhotu Ram University of Science and Technology", img: '/Images/deenbandhu.jpeg', url: '/colleges/lady-shri-ram-college' },
-    { name: "YMCA University of Science and Technology", img: '/Images/ymca.jpeg', url: '/colleges/shri-ram-college-of-commerce' },
-    { name: "Bhagat Phool Singh Mahila Vishwavidyalaya (BPSMV)", img: '/Images/bhagat phool.jpg', url: '/colleges/guru-gobind-singh-indraprastha-university' },
-    { name: "Chaudhary Devi Lal University", img: '/Images/ch devi.jpg', url: '/colleges/national-law-university' },
-    { name: "Manav Rachna International Institute of Research and Studies", img: '/Images/manav rachna.webp', url: '/colleges/jawahar-lal-nehru-university' },
-    { name: "Lingaya’s Vidyapeeth", img: '/Images/lingayas.jpg', url: '/colleges/indira-gandhi-national-open-university' },
+    { name: "Guru Jambheshwar University of Science and Technology", img: '/Images/guru jamesh.jpg', url: '/gurujameshar' },
+    { name: "Deenbandhu Chhotu Ram University of Science and Technology", img: '/Images/deenbandhu.jpeg', url: '/deenbandhu' },
+    { name: "YMCA University of Science and Technology", img: '/Images/ymca.jpeg', url: '/ymca' },
+    { name: "Bhagat Phool Singh Mahila Vishwavidyalaya (BPSMV)", img: '/Images/bhagat phool.jpg', url: '/bhagatphool' },
+    { name: "Chaudhary Devi Lal University", img: '/Images/ch devi.jpg', url: '/chaudharydevi' },
+    { name: "Manav Rachna International Institute of Research and Studies", img: '/Images/manav rachna.webp', url: '/manavrachna' },
+    { name: "Lingaya’s Vidyapeeth", img: '/Images/lingayas.jpg', url: '/lingyas' },
   ];
 
   const handleCardClick = (url) => {

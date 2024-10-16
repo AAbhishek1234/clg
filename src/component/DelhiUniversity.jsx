@@ -9,7 +9,7 @@ function DelhiUniversity() {
     { name: "Delhi University", img: '/Images/du.webp', url: '/delhiuniversityi' },
     { name: "Jamia Millia Islamia", img: '/Images/jamia.jpg', url: '/colleges/jamia-millia-islamia' },
     { name: "Deen Dayal Upadhyaya College", img: '/Images/deendayal.jpg', url: '/colleges/deen-dayal-upadhyaya' },
-    { name: "IIT Delhi", img: '/Images/iitdelhi.jpg', url: '/colleges/iit-delhi]' },
+    { name: "IIT Delhi", img: '/Images/iitdelhi.jpg', url: '/colleges/iit-delhi' },
     { name: "Lady Shri Ram College for Women", img: '/Images/ladysrm.jpg', url: '/colleges/lady-shri-ram-college' },
     { name: "Shri Ram College of Commerce", img: '/Images/srcc.jpg', url: '/colleges/shri-ram-college-of-commerce' },
     { name: "Guru Gobind Singh Indraprastha University", img: '/Images/ggsi1.jpeg', url: '/colleges/guru-gobind-singh-indraprastha-university' },
