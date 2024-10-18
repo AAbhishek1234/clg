@@ -31,6 +31,8 @@ import BhagatPhool from './component/BhagatPhool';
 import ChaudharyDevi from './component/ChaudharyDevi';
 import ManavRachna from './component/ManavRachna';
 import Lingays from './component/Lingays';
+import Rajsthan from './component/Rajsthan';
+import RajsthanUniversity from './component/RajsthanUniversity';
 function App() {
   return (
     <>
@@ -65,6 +67,8 @@ function App() {
     <Route path='/chaudharydevi' element={<ChaudharyDevi/>}/>
     <Route path='/manavrachna' element={<ManavRachna/>}/>
     <Route path='/lingyas' element={<Lingays/>}/>
+    <Route path='/colleges/Rajasthan' element={<Rajsthan/>}/>
+    <Route path='/rajsthanuniversity' element={<RajsthanUniversity/>}/>
     </Routes>
         </Router>
     </>
